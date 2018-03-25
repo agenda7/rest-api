@@ -6,6 +6,6 @@ Main **agenda7** Rest API back-end application.
 
 - Download repo
 - Install dependencies using `npm install`
-- Start the node application unsing `npm run dev`
+- Start the node application using `npm run dev`
 
-Note: If youm are running production, use `npm start` instead.
+Note: If you are running production, use `npm start` instead.
