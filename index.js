@@ -5,15 +5,16 @@ const config = require('./src/config')
 
 // Express
 const app = express()
+const routes = require('./src/routes')(app)
 
 // Enable CORS
 app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", req.headers.origin);
-  res.header("Access-Control-Allow-Headers", "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
-  res.header("Access-Control-Allow-Methods", "GET,HEAD,POST,PUT,DELETE,OPTIONS");
-  res.header("Access-Control-Allow-Credentials", "true");
-  next();
-});
+  res.header("Access-Control-Allow-Origin", req.headers.origin)
+  res.header("Access-Control-Allow-Headers", "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With")
+  res.header("Access-Control-Allow-Methods", "GET,HEAD,POST,PUT,DELETE,OPTIONS")
+  res.header("Access-Control-Allow-Credentials", "true")
+  next()
+})
 
 // Enable CORS Pre-Flight
 app.use(bodyParser.json())
