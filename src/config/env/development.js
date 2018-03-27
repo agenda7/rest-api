@@ -1,6 +1,6 @@
 module.exports = {
   env: 'development',
-  endpoint: '/api',
+  endpoint: '',
   port: 3000,
   mysql: {
     host: 'localhost',
