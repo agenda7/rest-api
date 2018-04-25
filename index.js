@@ -5,7 +5,6 @@ const config = require('./src/config')
 
 // Express
 const app = express()
-const routes = require('./src/routes')(app)
 
 // Enable CORS
 app.use(function(req, res, next) {
@@ -19,6 +18,8 @@ app.use(function(req, res, next) {
 // Enable CORS Pre-Flight
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
+
+const routes = require('./src/routes')(app)
 
 // Start server
 app.listen(config.port, function () {

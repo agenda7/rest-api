@@ -1,7 +1,7 @@
 module.exports = {
   env: 'development',
   endpoint: '',
-  port: 3000,
+  port: 4000,
   mysql: {
     host: 'localhost',
     user: 'root',

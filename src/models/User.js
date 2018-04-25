@@ -23,7 +23,7 @@ class User {
   }
 
   static create (req, res) {
-    db.query(UserQueries.create(req.params), User.callback(req, res))
+    db.query(UserQueries.create(req.params.wallace), User.callback(req, res))
   }
 
   static update (req, res) {

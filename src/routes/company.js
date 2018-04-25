@@ -1,11 +1,11 @@
-const User = require('../models/User')
+const Company = require('../models/Company')
 const express = require('express')
 const router = express.Router()
 
-router.get('/', User.read)
-router.get('/:id', User.readOne)
-router.put('/:id', User.update)
-router.post('/', User.create)
-router.delete('/:id', User.remove)
+router.get('/', Company.read)
+router.get('/:id', Company.readOne)
+router.put('/:id', Company.update)
+router.post('/', Company.create)
+router.delete('/:id', Company.remove)
 
 module.exports = router
