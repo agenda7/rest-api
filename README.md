@@ -2,10 +2,21 @@
 
 Main **agenda7** Rest API back-end application.
 
-### Running application
+### Dependencias
 
-- Download repo
-- Install dependencies using `npm install`
-- Start the node application using `npm run dev`
+- Node v7.10.0+
+- MySQL rodando local (MAMP/WAMP)
+- Nodemon
+- Terminal de comando
 
-Note: If you are running production, use `npm start` instead.
+### Rodando a aplicação
+
+- Faça download do repositório
+- Instale os pacotes usados no projeto: `npm install`
+- Inicie a aplicação, usando: `npm run dev`
+
+A aplicação estará rodando na porta especificada nas configurações (/src/config/env/development.js:4)
+
+Ex.: http://localhost:4000
+
+Nota: Para rodar em produção utilize: `npm start`
