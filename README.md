@@ -15,8 +15,8 @@ Main **agenda7** Rest API back-end application.
 - Instale os pacotes usados no projeto: `npm install`
 - Inicie a aplicação, usando: `npm run dev`
 
-A aplicação estará rodando na porta especificada nas configurações (/src/config/env/development.js:4)
+A aplicação estará rodando na porta especificada nas configurações `(/src/config/env/development.js:4)`
 
-Ex.: http://localhost:4000
+Ex.: `http://localhost:4000`
 
 Nota: Para rodar em produção utilize: `npm start`
