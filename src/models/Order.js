@@ -1,5 +1,5 @@
 const db = require('../config/db')
-const UserQueries = require('../queries/order')
+const OrderQueries = require('../queries/order')
 
 class Order {
   constructor (args) {
@@ -13,26 +13,26 @@ class Order {
       res.send(result)
     }
   }
-
-  static read (req, res) {
-    db.query(Order.read, Order.callback(req, res))
+static read (req, res) {
+    db.query(OrderQueries.read, Service.callback(req, res))
   }
 
   static readOne (req, res) {
-    db.query(Order.readOne(req.params.id), Order.callback(req, res))
+    db.query(OrderQueries.readOne(req.params.id), Service.callback(req, res))
   }
 
   static create (req, res) {
-    db.query(Order.create(req.params.wallace), Order.callback(req, res))
+    db.query(OrderQueries.create, req.body, Service.callback(req, res))
   }
 
   static update (req, res) {
-    db.query(Order.update(req.params), Order.callback(req, res))
+    db.query(OrderQueries.update(req.params.id), req.body, Service.callback(req, res))
   }
 
   static remove (req, res) {
-    db.query(Order.remove(req.params.id), Order.callback(req, res))
+    db.query(OrderQueries.remove(req.params.id), Service.callback(req, res))
   }
+
 }
 
 module.exports = Order

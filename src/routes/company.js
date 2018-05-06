@@ -3,6 +3,7 @@ const express = require('express')
 const router = express.Router()
 
 router.get('/', Company.read)
+router.get('/search/:query', Company.search)
 router.get('/:id', Company.readOne)
 router.put('/:id', Company.update)
 router.post('/', Company.create)

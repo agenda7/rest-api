@@ -2,20 +2,23 @@ const tname = 'users'
 
 const read = `SELECT * FROM ${tname}`
 
-const readOne = userId => {
-  return `SELECT * FROM ${tname} WHERE id = ${userId}`
+const readOne = companyId => {
+  return `SELECT * FROM ${tname} WHERE companyId = ${companyId}`
 }
 
-const create = user => {
-  return `INSERT INTO ${tname} (name, email, password, fbId) VALUES (${user.name}, ${user.email}, ${user.password}, ${user.fbId})`
+const create = `INSERT INTO ${tname} SET ?`
+
+const update = companyId => {
+  return `UPDATE ${tname} SET ? WHERE companyId = ${companyId}`
 }
 
-const update = user => {
-  return `INSERT INTO ${tname} (name, email, password, fbId) VALUES (${user.name}, ${user.email}, ${user.password}, ${user.fbId})`
+const remove = companyId => {
+  return `DELETE FROM ${tname} WHERE companyId = ${companyId}`
 }
 
-const remove = userId => {
-  return `INSERT INTO ${tname} (name, email, password, fbId) VALUES (${user.name}, ${user.email}, ${user.password}, ${user.fbId})`
+const search = query => {
+  return `SELECT * FROM ${tname} WHERE name = '%${query}%'`
 }
+
 
 module.exports = { read, readOne, create, update, remove }
